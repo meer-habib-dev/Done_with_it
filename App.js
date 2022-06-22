@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StatusBar } from "expo-status-bar";
+import { useEffect, useState } from "react";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
+import AppButton from "./app/components/AppButton";
+import ListItem from "./app/components/ListItem";
+import Screen from "./app/components/Screen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
+import LoginScreen from "./app/screens/LoginScreen";
+import ImageInput from "./app/components/ImageInput";
+import * as ImagePicker from "expo-image-picker";
+import ImageInputList from "./app/components/ImageInputList";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <Screen>
+        <ListingEditScreen />
+      </Screen>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
