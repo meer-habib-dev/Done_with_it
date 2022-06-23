@@ -9,13 +9,16 @@ import LoginScreen from "./app/screens/LoginScreen";
 import ImageInput from "./app/components/ImageInput";
 import * as ImagePicker from "expo-image-picker";
 import ImageInputList from "./app/components/ImageInputList";
+import AuthNavigator from "./app/navigation/AuthNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+import NavigationTheme from "./app/navigation/NavigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 export default function App() {
   return (
-    <>
-      <Screen>
-        <ListingEditScreen />
-      </Screen>
-    </>
+    <NavigationContainer theme={NavigationTheme}>
+      {/* <AuthNavigator /> */}
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
 

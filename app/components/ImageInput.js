@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import React, { useEffect } from "react";
-import colors from "../../config/colors";
+import colors from "../config/colors";
 
 import * as ImagePicker from "expo-image-picker";
 import { MaterialCommunityIcons } from "@expo/vector-icons";

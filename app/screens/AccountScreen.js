@@ -2,7 +2,7 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
-import colors from "../../config/colors";
+import colors from "../config/colors";
 import Icon from "../components/Icon";
 import Separator from "../components/Separator";
 
@@ -15,14 +15,15 @@ const menuItem = [
     },
   },
   {
-    title: "My Fisting",
+    title: "My Messages",
     icon: {
       name: "email",
       backgroundColor: colors.secondary,
     },
+    targetScreen: "Messages",
   },
 ];
-const AccountScreen = () => {
+const AccountScreen = ({ navigation }) => {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
@@ -46,6 +47,7 @@ const AccountScreen = () => {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />

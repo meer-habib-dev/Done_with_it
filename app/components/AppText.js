@@ -1,6 +1,6 @@
 import { Platform, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import defaultStyle from "../../config/styles";
+import defaultStyle from "../config/styles";
 const AppText = ({ children, style, ...otherProps }) => {
   return (
     <>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import color from "../../config/colors";
+import color from "../config/colors";
 const ViewImageScreen = () => {
   return (
     <View style={styles.imageContainer}>
